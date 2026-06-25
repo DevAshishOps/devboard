@@ -1,0 +1,147 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevBoard - Developer Task Tracker</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#5b21b6,#7c3aed,#a855f7);
+    color:white;
+    padding:40px 20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    opacity:.9;
+    margin-top:10px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    border-radius:16px;
+    padding:20px;
+}
+
+.card h2{
+    font-size:2rem;
+    margin-top:8px;
+}
+
+.tasks{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    border-radius:16px;
+    padding:25px;
+}
+
+.tasks h3{
+    margin-bottom:15px;
+}
+
+.task{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.task:last-child{
+    border:none;
+}
+
+.status{
+    font-weight:bold;
+}
+
+.done{ color:#86efac; }
+.progress{ color:#fde68a; }
+.todo{ color:#fca5a5; }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <header>
+        <h1>DevBoard</h1>
+        <p>Track development tasks and project progress effortlessly.</p>
+    </header>
+
+    <section class="stats">
+        <div class="card">
+            <p>Total Tasks</p>
+            <h2>24</h2>
+        </div>
+
+        <div class="card">
+            <p>Completed</p>
+            <h2>15</h2>
+        </div>
+
+        <div class="card">
+            <p>In Progress</p>
+            <h2>6</h2>
+        </div>
+    </section>
+
+    <section class="tasks">
+        <h3>Today's Tasks</h3>
+
+        <div class="task">
+            <span>Implement Login API</span>
+            <span class="status done">Done</span>
+        </div>
+
+        <div class="task">
+            <span>Create Dashboard UI</span>
+            <span class="status progress">In Progress</span>
+        </div>
+
+        <div class="task">
+            <span>Write Unit Tests</span>
+            <span class="status todo">Pending</span>
+        </div>
+
+        <div class="task">
+            <span>Deploy to Staging</span>
+            <span class="status todo">Pending</span>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>
+```
+
